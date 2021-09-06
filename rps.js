@@ -1,5 +1,29 @@
 $(document).ready(function () {
+  $("#containerheader2").hide();
+  $("#rightcontainer2").hide();
+  $("#rightmiddle").hide();
+  $("#leftmiddle").hide();
+  $("#playerwin").hide();
+  $("#cpurwin").hide();
     $("#getting_started").click(function(){
-        alert("The paragraph was clicked.");
-      });
+        $("#containerheader").hide();
+        $("#rightcontainer").hide();
+        $("#containerheader2").show();
+        $("#rightcontainer2").show();
+        $("#rightmiddle").show();
+        $("#leftmiddle").show();
+        $("#playerwin").show();
+        $("#cpuwin").show();
+    });
+    $("#exit").click(function(){
+      $("#containerheader2").hide();
+      $("#rightcontainer2").hide();
+      $("#rightmiddle").hide();
+      $("#leftmiddle").hide();
+      $("#playerwin").hide();
+      $("#cpuwin").hide();
+      $("#AboutModal3").hide();
+      $( "#containerheader" ).slideUp( 300 ).delay( 400 ).fadeIn( 400 );
+      $("#rightcontainer").show();
+  });
 });
