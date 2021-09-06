@@ -1,15 +1,173 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="rps.css">
+    <title>RPS</title>
 </head>
 <body>
     <section>
-        <div class="containerheader">
+        <div class="containerheader" id="containerheader">
+            <nav>
+                <ul>
+                  <li id="getting_started">
+                    <i class="fas fa-play"></i>
+                    Let's Play!!
+                    <span></span><span></span><span></span><span></span>
+                  </li>
+                </ul>
+              </nav>
+        </div>
+        <div class="containerheader2" id="containerheader2">
+          <div class="containerbox1">Round 1</div>
+          <div class="containerbox2">Rock-Paper-Scissors!!!</div>
+          <div class="containerheadertext2" id="containerheadertext2">Rock, Paper, Scissors!!!<br/>Choose an option.</div> 
+          <!-- Don't give up! -->
+          <!-- What's your next move? -->
+          <!-- You can do it. -->
+          <div class="paper"><i class="fas fa-hand-paper fa-6x" style="color:#F5F5F5!important;"></i></div>
+          <div class="papertext">Paper</div>
+          <div class="rock"><i class="fas fa-hand-rock fa-6x" style="color:#F5F5F5!important;"></i></div>
+          <div class="rocktext">Rock</div>
+          <div class="scissor"><i class="fas fa-hand-scissors fa-6x" style="color:#F5F5F5!important;"></i></div>
+          <div class="scissortext">Scissor</div>
+        </div>
+        <div class="rightcontainer2" id="rightcontainer2">
+          <div class="setting" id="setting"><i class="fas fa-cog fa-2x" style="color:#F5F5F5!important;"></i></div>
+          <div class="rule" id="rule"><i class="fas fa-question-circle fa-2x" style="color:#F5F5F5!important;"></i></div>
+        </div>
+        <div class="rightmiddle" id="rightmiddle">
+          <div class="C">ℂ</div>
+          <div class="P">ℙ</div>
+          <div class="U">𝕌</div>
+        </div>
+        <div class="leftmiddle" id="leftmiddle">
+          <div class="P2">ℙ</div>
+          <div class="L">𝕃</div>
+          <div class="A">𝔸</div>
+          <div class="Y">𝕐</div>
+          <div class="E">𝔼</div>
+          <div class="R">ℝ</div>
+        </div>
+        <div class="playerwin" id="playerwin">69</div>
+        <div class="cpuwin" id="cpuwin">69</div>
+        <div class="rightcontainer" id="rightcontainer">
+          <a href="https://github.com/nageCasillas/RPS.git">
+            <div class="gitbox btn-11">
+              <i class="fab fa-github fa-3x" style="color:#F5F5F5!important;"></i>
+              <div class="rightcontainertext">GitHub</div>
+            </div>
+          </a>
+          <a href="https://codepen.io/nagecasillas/pen/vYgoBNw">
+            <div class="penbox btn-11">
+              <i class="fab fa-codepen fa-3x" style="color:#F5F5F5 !important;"></i>
+              <div class="rightcontainertext">CodePen</div>
+            </div>
+          </a>
+          <div class="about btn-11" id="About">
+            <i class="fas fa-info-circle fa-3x" style="color:#F5F5F5 !important;"></i>
+            <div class="rightcontainertext">About</div>
+          </div>
+        </div>
+        <div id="AboutModal" class="modal1" style="display: none;">
+          <!-- Modal content -->
+          <div class="modal-content1">
+            <div class="modal-header1">
+              <span class="close">&times;</span>
+              <h2>About.</h2>
+            </div>
+            <div class="modal-body1">
+              <p>Rock Paper Scissor Game</p>
+              <p>It is a basic rock-paper-scissors game, where each outcome from a round is totally random from the algorithm. Sorry, no AI has been used, just some random generated possibilites from the algorithm. <br/>Hope you enjoy the game. </p>
+            </div>
+          </div>
+        </div>
+        <div id="AboutModal2" class="modal1" style="display: none;">
+          <!-- Modal content -->
+          <div class="modal-content2">
+            <div class="modal-header1">
+              <span class="close2">&times;</span>
+              <h2>Rule.</h2>
+            </div>
+            <div class="modal-body1">
+              <p>The outcome of the game is determined by 3 simple rules:<br/>
+                &#8226;Rock wins against scissors.<br/>
+                &#8226;Scissors win against paper.<br/>
+                &#8226;Paper wins against rock.<br/>If the outcome of the game is same then it is considered as a draw. <br/> The first one to score five point wins.<br/></p>
+            </div>
+          </div>
+        </div>
+        <div id="AboutModal3" class="modal1" style="display: none;">
+          <!-- Modal content -->
+          <div class="modal-content2">
+            <div class="modal-header2">
+              <div class="btn from-left" id="close">
+                𝗥𝗲𝘀𝘂𝗺𝗲
+              </div>
+              <div class="btn2 from-left">
+                𝗥𝗲𝘀𝘁𝗮𝗿𝘁
+              </div>
+              <div class="btn3 from-left" id="exit">
+                𝗘𝘅𝗶𝘁
+              </div>
+            </div>
+          </div>
         </div>
     </section>
 
 <script type="text/javascript" src="rps.js"></script>
+<script>
+  // Get the modal
+  var modal = document.getElementById("AboutModal");
+  var modal2 = document.getElementById("AboutModal2");
+  var modal3 = document.getElementById("AboutModal3");
+  var close = document.getElementById("close");
+  // Get the button that opens the modal
+  var btn = document.getElementById("About");
+  var btn2 = document.getElementById("rule");
+  var btn3 = document.getElementById("setting");
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  var span2 = document.getElementsByClassName("close2")[0];
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  btn2.onclick = function() {
+    modal2.style.display = "block";
+  }
+  btn3.onclick = function() {
+    modal3.style.display = "block";
+  }
+  
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none"
+  }
+  span2.onclick = function() {
+    modal2.style.display = "none";
+  }
+  close.onclick = function() {
+    modal3.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+    if (event.target == modal2) {
+      modal2.style.display = "none";
+    }
+    if (event.target == modal3) {
+      modal3.style.display = "none";
+    }
+  }
+  </script>
 </body>
 </html>
 
