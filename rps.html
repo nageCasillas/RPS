@@ -28,11 +28,11 @@
           <!-- Don't give up! -->
           <!-- What's your next move? -->
           <!-- You can do it. -->
-          <div class="paper"><i class="fas fa-hand-paper fa-6x" style="color:#F5F5F5!important;"></i></div>
+          <div class="paper" id="paper"><i class="fas fa-hand-paper fa-6x" style="color:#F5F5F5!important;"></i></div>
           <div class="papertext">Paper</div>
-          <div class="rock"><i class="fas fa-hand-rock fa-6x" style="color:#F5F5F5!important;"></i></div>
+          <div class="rock" id="rock"><i class="fas fa-hand-rock fa-6x" style="color:#F5F5F5!important;"></i></div>
           <div class="rocktext">Rock</div>
-          <div class="scissor"><i class="fas fa-hand-scissors fa-6x" style="color:#F5F5F5!important;"></i></div>
+          <div class="scissor" id="scissor"><i class="fas fa-hand-scissors fa-6x" style="color:#F5F5F5!important;"></i></div>
           <div class="scissortext">Scissor</div>
         </div>
         <div class="rightcontainer2" id="rightcontainer2">
@@ -115,6 +115,71 @@
               </div>
             </div>
           </div>
+        </div>
+        <div id="AboutModal4" class="modal1" style="display: none;">
+          <!-- Modal content -->
+          <div class="modal-content3">
+            <div class="modal-header3">
+              <p class="con1" style="display: none; padding-right: 40px;">You chose Rock.<br/>
+                CPU chose Rock.<br/>
+                As the outcome are the same, So it's a draw.<br/>
+                Hence no point is given to either one.</p>
+              <p class="con2" style="display: none; padding-right: 40px;">You chose Paper.<br/>
+                CPU chose Paper.<br/>
+                As the outcome are the same, So it's a draw.<br/>
+                Hence no point is given to either one.</p>
+              <p class="con3" style="display: none; padding-right: 40px;">You chose Scissor.<br/>
+                CPU chose Scissor.<br/>
+                As the outcome are the same, So it's a draw.<br/>
+                Hence no point is given to either one.</p>
+              <p class="con4" style="display: none; padding-right: 94px;">You chose Rock.<br/>
+                CPU chose Scissor.<br/>
+                As Rock beats Scissor, So you win.<br/>
+                Hence one point is given to you.</p>
+              <p class="con5" style="display: none; padding-right: 80px;">You chose Scissor.<br/>
+                CPU chose Rock.<br/>
+                As Rock beats Scissor, So CPU wins.<br/>
+                Hence one point is given to CPU.</p>
+              <p class="con6" style="display: none; padding-right: 92px;">You chose Scissor.<br/>
+                CPU chose Paper.<br/>
+                As Scissor beats Paper, So you win.<br/>
+                Hence one point is given to you.</p>
+              <p class="con7" style="display: none; padding-right: 78px;">You chose Paper.<br/>
+                CPU chose Scissor.<br/>
+                As Scissor beats Paper, So CPU wins.<br/>
+                Hence one point is given to CPU.</p>
+              <p class="con8" style="display: none; padding-right: 103px;">You chose Paper.<br/>
+                CPU chose Rock.<br/>
+                As Paper beats Rock, So you win.<br/>
+                Hence one point is given to you.</p>
+              <p class="con9" style="display: none; padding-right: 90px;">You chose Rock.<br/>
+                CPU chose Paper.<br/>
+                As Paper beats Rock, So CPU wins.<br/>
+                Hence one point is given to CPU.</p>
+            </div>
+          </div>
+          <div class="rightmiddle2" id="rightmiddle2">
+            <div class="C">ℂ</div>
+            <div class="P">ℙ</div>
+            <div class="U">𝕌</div>
+          </div>
+          <div class="leftmiddle2" id="leftmiddle2">
+            <div class="P2">ℙ</div>
+            <div class="L">𝕃</div>
+            <div class="A">𝔸</div>
+            <div class="Y">𝕐</div>
+            <div class="E">𝔼</div>
+            <div class="R">ℝ</div>
+          </div>
+          <div class="cpuwin" id="cpuwin2"></div>
+          <div class="playerwin" id="playerwin2"></div>
+          <div class="leftpaper" id="leftpaper"><i class="fas fa-hand-paper fa-6x"></i></div>
+          <div class="leftrock" id="leftrock"><i class="fas fa-hand-rock fa-6x" ></i></div>
+          <div class="leftscissor" id="leftscissor"><i class="fas fa-hand-scissors fa-6x" ></i></div>
+          <div class="rightpaper" id="rightpaper"><i class="fas fa-hand-paper fa-6x" ></i></div>
+          <div class="rightrock" id="rightrock"><i class="fas fa-hand-rock fa-6x" ></i></div>
+          <div class="rightscissor" id="rightscissor"><i class="fas fa-hand-scissors fa-6x" ></i></div>
+          <div class="button" id="OK">OK</div>
         </div>
     </section>
 
