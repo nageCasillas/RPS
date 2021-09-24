@@ -25,9 +25,6 @@
           <div class="containerbox1">Round 1</div>
           <div class="containerbox2">Rock-Paper-Scissors!!!</div>
           <div class="containerheadertext2" id="containerheadertext2">Rock, Paper, Scissors!!!<br/>Choose an option.</div> 
-          <!-- Don't give up! -->
-          <!-- What's your next move? -->
-          <!-- You can do it. -->
           <div class="paper" id="paper"><i class="fas fa-hand-paper fa-6x" style="color:#F5F5F5!important;"></i></div>
           <div class="papertext">Paper</div>
           <div class="rock" id="rock"><i class="fas fa-hand-rock fa-6x" style="color:#F5F5F5!important;"></i></div>
@@ -52,8 +49,8 @@
           <div class="E">𝔼</div>
           <div class="R">ℝ</div>
         </div>
-        <div class="playerwin" id="playerwin">69</div>
-        <div class="cpuwin" id="cpuwin">69</div>
+        <div class="playerwin" id="playerwin">0</div>
+        <div class="cpuwin" id="cpuwin">0</div>
         <div class="rightcontainer" id="rightcontainer">
           <a href="https://github.com/nageCasillas/RPS.git">
             <div class="gitbox btn-11">
@@ -81,7 +78,7 @@
             </div>
             <div class="modal-body1">
               <p>Rock Paper Scissor Game</p>
-              <p>It is a basic rock-paper-scissors game, where each outcome from a round is totally random from the algorithm. Sorry, no AI has been used, just some random generated possibilites from the algorithm. <br/>Hope you enjoy the game. </p>
+              <p class="instruction">It is a basic rock-paper-scissors game, where each outcome from a round is totally random from the algorithm. Sorry, no AI has been used, just some random generated possibilites from the algorithm. <br/>Hope you enjoy the game. </p>
             </div>
           </div>
         </div>
@@ -107,7 +104,7 @@
               <div class="btn from-left" id="close">
                 𝗥𝗲𝘀𝘂𝗺𝗲
               </div>
-              <div class="btn2 from-left">
+              <div class="btn2 from-left" id="restart">
                 𝗥𝗲𝘀𝘁𝗮𝗿𝘁
               </div>
               <div class="btn3 from-left" id="exit">
@@ -118,7 +115,7 @@
         </div>
         <div id="AboutModal4" class="modal1" style="display: none;">
           <!-- Modal content -->
-          <div class="modal-content3">
+          <div class="modal-content3" id="modal-content3">
             <div class="modal-header3">
               <p class="con1" style="display: none; padding-right: 40px;">You chose Rock.<br/>
                 CPU chose Rock.<br/>
@@ -180,6 +177,18 @@
           <div class="rightrock" id="rightrock"><i class="fas fa-hand-rock fa-6x" ></i></div>
           <div class="rightscissor" id="rightscissor"><i class="fas fa-hand-scissors fa-6x" ></i></div>
           <div class="button" id="OK">OK</div>
+        </div>
+        <div class="modal-content4" id="modal-content4" style="display: none;">
+          <div class="modal-header4">
+            <div class="textcontent">
+            </div>
+              <div class="btn4 from-left" id="restart2" >
+                𝐍𝐞𝐰 𝐆𝐚𝐦𝐞
+              </div>
+              <div class="btn5 from-left" id="exit2" >
+                𝐄𝐱𝐢𝐭
+              </div>
+          </div>
         </div>
     </section>
 
